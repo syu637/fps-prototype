@@ -13,7 +13,22 @@ Roblox用FPSプロトタイプ（1v1武器バランス検証）
 - ASSETS/ : 3Dモデルやチェックリスト
 - TEST/ : プレイテスト計画とログフォーマット
 
+重要ポイント（短く）
+- ヒット判定はまず hitscan（瞬間判定）で実装するのを推奨。ショットガンは複数ペレットのレイ実装。
+- まずは最小MVP：移動・撃つ・リロード・1マップ・AR/SMG/SG を作って内部プレイテスト。
+- KPI：平均TtK（近中遠）、武器別1v1勝率、命中率、弾切れ発生率を必ず収集。
+
 次のアクション:
 1. プロトタイプ用アセットを調達（Roblox Asset Library か自作）
 2. MVP を実装して内部テスト（1v1、30セッション目安）
-3. KPI に基づきチューニング
+3. KPI に基づきチューニング（小幅変更を繰り返す）
+
+ファイル構成の推奨:
+- README.md
+- SPEC/WEAPONS.md
+- ASSETS/CHECKLIST.md
+- TEST/PLAYTEST_PLAN.md
+- .gitignore
+
+運用メモ:
+- テスト結果（勝率/TtK/命中率）は Issue で報告 → `scripts/analysis/playtest_analysis.py` で集計
