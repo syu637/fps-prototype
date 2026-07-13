@@ -38,4 +38,23 @@ luac.out
 *.i*86
 *.x86_64
 *.hex
+# macOS
+.DS_Store
 
+# VSCode
+.vscode/
+
+# Logs / temps
+*.log
+*.tmp
+*.cache
+
+# Roblox files
+*.rbxl
+*.rbxlx
+*.rbxmx
+
+# Blender / caches
+*.blend1
+*.blend2
+*.blendcache
